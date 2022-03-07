@@ -1,4 +1,6 @@
-### The code that generates .csv files out of Flir images can be found in the code_for_csv_files directory.
+### Gaussian-mixture-based methodology to identify sunlit leaves in images.
+
+The code that generates .csv files out of Flir images can be found in the code_for_csv_files directory.
 The flir images should be places in data/flir_images
 After you generate the .csv files, place them in the data/csv_files folder
 Make sure to adjust the prediction resolution and the output folder path in the GMM_Paper_csv.py script.
