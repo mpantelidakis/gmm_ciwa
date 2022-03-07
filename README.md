@@ -3,7 +3,7 @@
 Flir images should be placed in the data/flir_images/ directory.
 Code that generates .csv files out of Flir images can be found in the code_for_csv_files/ directory.
 
-After you generate the .csv files, place them in the data/csv_files folder
+After you generate the .csv files, place them in the data/csv_files folder.
 Make sure to adjust the prediction resolution and the output folder path in the GMM_Paper_csv.py script.
 Run the GMM_Paper_csv.py script. Use the -act argument to run the GMM for all the csv_files.
 You can use the -i argument to run the GMM for only one image.
