@@ -3,8 +3,7 @@ import pandas as pd
 from GMM import *
 import util as util
 from scipy import stats
-import glob
-import argparse
+import glob, os, argparse
 # from matplotlib import pyplot as plt
 from PIL import Image
 
@@ -85,7 +84,7 @@ class GMM_Paper:
 
         prediction = Image.fromarray(np_image.astype(np.uint8))
         prediction = prediction.resize((480, 320))
-        prediction.save("Testset/test/" + csv_path.split('/')[2].replace(".csv",'.jpg'))
+        prediction.save("Testset/test2/" + csv_path.split('/')[2].replace(".csv",'.jpg'))
  
 class SmartFormatter(argparse.HelpFormatter):
 
@@ -106,7 +105,10 @@ if __name__ == '__main__':
     args = parser.parse_args()
     
     gmm = GMM_Paper()
-    
+
+    if not os.path.isdir("%s"%("Testset/test")):
+        os.makedirs("%s"%("Testset/test"))
+
     if args.actions:
         gmm.csv_path_list = glob.glob("data/csv_files/*.csv")
         for csv_path in gmm.csv_path_list:
